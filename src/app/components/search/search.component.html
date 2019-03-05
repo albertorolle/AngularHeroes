@@ -1,0 +1,12 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="row  animated fadeIn fast" *ngIf=!result.length>
+    <div class="col-md-12">
+        <div class="alert alert-info" role="Alert">
+            <p>No se han encontrado resultados</p>
+        </div>
+    </div>
+</div>
+<div class="card-columns" *ngIf=result.length>
+    <app-heroe-card [heroe]="heroe" [index]="heroe.index" *ngFor="let heroe of result"></app-heroe-card>
+</div>
